@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Steps from '../Components/Steps'
+import Slider from '../Components/Slider'
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div>
       <Header></Header>
       <Steps></Steps>
+      <Slider></Slider>
     </div>
   )
 }
