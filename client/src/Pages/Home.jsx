@@ -11,7 +11,6 @@ const Home = () => {
       <Header></Header>
       <Steps></Steps>
       <Slider></Slider>
-      <Footer></Footer>
     </div>
   )
 }
