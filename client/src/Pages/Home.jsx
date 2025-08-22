@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Steps from '../Components/Steps'
 import Slider from '../Components/Slider'
+import Footer from '../Components/Footer'
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <Header></Header>
       <Steps></Steps>
       <Slider></Slider>
+      <Footer></Footer>
     </div>
   )
 }
