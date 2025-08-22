@@ -1,9 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 
+
 const Header = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between px-6 py-10 gap-10">
+    <div className="flex flex-col md:flex-row items-center justify-between px-6 py-10 gap-y-10">
       {/* LEFT */}
       <div className="flex-1 flex flex-col gap-6 max-w-xl">
         <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900">
@@ -26,7 +27,8 @@ const Header = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="flex-1">
+      <div className="w-full max-w-md">
+        <img src={assets.header_img} alt="" />
 
       </div>
     </div>
