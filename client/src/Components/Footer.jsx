@@ -3,28 +3,27 @@ import { assets } from "../assets/assets";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-950 text-gray-300 py-8 px-4 mt-16 border-t border-gray-800">
+    <footer className="w-full bg-gray-100 text-gray-950 py-8 px-4 mt-16 border-t border-gray-800">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo and Brand */}
         <div className="flex items-center gap-3 mb-4 md:mb-0">
           <img src={assets.logo_icon} alt="Logo" className="w-8 h-8" />
-          <span className="font-bold text-lg text-white">bg.removal</span>
+          <span className="font-bold text-lg text-gray-950">bg.removal</span>
         </div>
         {/* Links */}
         <div className="flex flex-wrap gap-6 text-sm justify-center">
-          <a href="#" className="hover:text-blue-400 transition">Home</a>
+          <a href="/" className="hover:text-blue-400 transition">Home</a>
           <a href="#" className="hover:text-blue-400 transition">Features</a>
-          <a href="#" className="hover:text-blue-400 transition">Pricing</a>
-          <a href="#" className="hover:text-blue-400 transition">Contact</a>
+          <a href="/buy" className="hover:text-blue-400 transition">Pricing</a>
         </div>
         {/* Socials */}
         <div className="flex gap-4">
-          <a href="#" aria-label="Facebook"><img src={assets.facebook_icon} alt="Facebook" className="w-5 h-5 hover:scale-110 transition" /></a>
-          <a href="#" aria-label="Twitter"><img src={assets.twitter_icon} alt="Twitter" className="w-5 h-5 hover:scale-110 transition" /></a>
-          <a href="#" aria-label="Google Plus"><img src={assets.google_plus_icon} alt="Google Plus" className="w-5 h-5 hover:scale-110 transition" /></a>
+          <a href="#" aria-label="Facebook"><img src={assets.facebook_icon} alt="Facebook" className="w-7 h-7 hover:scale-150 transition" /></a>
+          <a href="#" aria-label="Twitter"><img src={assets.twitter_icon} alt="Twitter" className="w-7 h-7 hover:scale-150 transition" /></a>
+          <a href="#" aria-label="Google Plus"><img src={assets.google_plus_icon} alt="Google Plus" className="w-7 h-7 hover:scale-150 transition" /></a>
         </div>
       </div>
-      <div className="text-center text-xs text-gray-500 mt-6">
+      <div className="text-center text-xs text-gray-950 mt-6">
         &copy; {new Date().getFullYear()} Background Remover. All rights reserved.
       </div>
     </footer>
