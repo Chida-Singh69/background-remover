@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Logo and Brand */}
         <div className="flex items-center gap-3 mb-4 md:mb-0">
           <img src={assets.logo_icon} alt="Logo" className="w-8 h-8" />
-          <span className="font-bold text-lg text-white">Background Remover</span>
+          <span className="font-bold text-lg text-white">bg.removal</span>
         </div>
         {/* Links */}
         <div className="flex flex-wrap gap-6 text-sm justify-center">
