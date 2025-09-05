@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 const Navbar = () => {
+  const { openSignIn } = useClerk();
+  const { isSignedIn, user } = useUser();
+
   return (
     <nav className="w-full bg-gray-950/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
       <div className="flex items-center justify-between mx-4 py-3 lg:mx-44">
@@ -25,10 +29,19 @@ const Navbar = () => {
 
           {/* Get Started Button */}
           <Link to="/">
-            <button className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
-              Get Started
-              <img className="w-4 sm:w-5" src={assets.arrow_icon} alt="" />
-            </button>
+            {isSignedIn ? (
+              <div>
+                <UserButton/>
+              </div>
+            ) : (
+              <button
+                onClick={() => openSignIn({})}
+                className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white px-5 py-2 sm:px-8 sm:py-3 text-sm sm:text-base rounded-full font-semibold shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                Get Started
+                <img className="w-4 sm:w-5" src={assets.arrow_icon} alt="" />
+              </button>
+            )}
           </Link>
         </div>
       </div>
